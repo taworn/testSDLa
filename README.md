@@ -44,7 +44,7 @@ testing SDL on Android.
  - google.com - to search every time when you want to learn any new things
  - stackoverflow.com - good community
  - www.sitepoint.com/using-c-and-c-code-in-an-android-app-with-the-ndk/ - for building SDL on Android
- - www.dinomage.com/2013/05/howto-sdl-on-android-part-2-platform-details/ - for building SDL_image and SDL_ttf on Android
+ - www.dinomage.com/2013/01/howto-sdl-on-android/ - for building SDL_image and SDL_ttf on Android
 
 --------
 Taworn T.
