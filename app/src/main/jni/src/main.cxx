@@ -16,9 +16,6 @@ int main(int argc, char *argv[])
 	// creates renderer
 	SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
-	// gets the window surface
-	SDL_Surface *surfaceWindow = SDL_GetWindowSurface(window);
-
 	// opens fonts
 	TTF_Font *fontSmall = TTF_OpenFont("FreeSans.ttf", 24);
 	TTF_Font *fontMedium = TTF_OpenFont("FreeSans.ttf", 32);
@@ -86,22 +83,17 @@ int main(int argc, char *argv[])
 		}
 
 		// draws FPS
-		/*
-		 * These lines will not work on Android.  I think it about 
-		 * TTF_RenderUTF8_Solid and SDL_FreeSurface in main loop.
-		 *
 		char fpsBuffer[16];
 		sprintf(fpsBuffer, "%u", fps);
 		SDL_Surface *surfaceFPS = TTF_RenderUTF8_Solid(fontSmall, fpsBuffer, { 0x80, 0x80, 0x80 });
 		SDL_Texture *textureFPS = SDL_CreateTextureFromSurface(renderer, surfaceFPS);
-		rect.x = surfaceWindow->w - surfaceFPS->w;
-		rect.y = surfaceWindow->h - surfaceFPS->h;
+		rect.x = w - surfaceFPS->w;
+		rect.y = h - surfaceFPS->h;
 		rect.w = surfaceFPS->w;
 		rect.h = surfaceFPS->h;
 		SDL_RenderCopy(renderer, textureFPS, NULL, &rect);
 		SDL_DestroyTexture(textureFPS);
 		SDL_FreeSurface(surfaceFPS);
-		 */
 
 		// outputs to screen
 		SDL_RenderPresent(renderer);
