@@ -37,7 +37,7 @@ testing SDL on Android.
    ndk-build NDK_LIBS_OUT=../jniLibs
  - on Android Studio, edit SDLActivity.java, uncomment SDL2_image and SDL2_ttf
  - compile and run
- - that all :)
+ - that's all :)
 
 **Thank**
 
